@@ -7,5 +7,7 @@ Termék törlése
 Bevásárlólista
 •	Termék neve
 •	Hány darab
-Bevásárlólista kiírása (Termékek nevei, Mennyi kalóriát tartalmaz összesen, Mennyibe kerül összesen)
+Bevásárlólista kiírása (Termékek nevei, Mennyi kalóriát tartalmaz összesen, Mennyibe kerül összesen,)
+Bevásárlólista törlése
+
 
