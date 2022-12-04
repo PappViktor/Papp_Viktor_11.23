@@ -14,3 +14,20 @@ def menu():
     print("5 - Bevásálólistaba termék hozzáadása")
     print("6 - Bevásárlólista törlése ")
     return input("Választás: ")
+
+def Beolvas():
+    file=open("aru.csv","r", encoding="utf-8")
+    
+    for egysor in file:
+        darabolt=egysor.strip().split(",")
+        aru.append(darabolt[0])
+        ar.append(int(darabolt[1]))
+        kaloria.append(int(darabolt[2]))
+    file.close
+
+def kiir():
+    system("cls")
+    print("asd")
+    for i in range(0,len(aru)):
+        print(f"\t {i+1} {(aru[i])}, {(ar[i])}, {(kaloria[i])} " )
+    input()

@@ -5,8 +5,7 @@ Valasztas=""
 while Valasztas!="0":
     Valasztas=menu()    
     if Valasztas=='1':
-        #kiir()
-        pass
+        kiir()
     elif Valasztas=='2':
         #ujaru()
        pass 
