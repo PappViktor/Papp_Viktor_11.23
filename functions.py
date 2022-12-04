@@ -90,3 +90,15 @@ def bevkiir():
     for i in range(0,len(Termek)):
         print(f"\t {i+1}. {(Termek[i])}, {(db[i])}, ")
     input()
+
+def bevtor():
+    system("cls")
+    file=open("bevasarlolista.csv","w", encoding="utf-8")
+    file.pop("bevasarlolista.csv")
+
+def bevuj():
+    system("cls")
+    kiir1()
+    új=int(input(" "))
+    
+    

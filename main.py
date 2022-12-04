@@ -20,8 +20,8 @@ while Valasztas!="0":
         bevkiir()
         
     elif Valasztas=="5":
-        #bevuj()
-        pass
+        bevuj()
+        
     elif Valasztas=='6':
-        #bevtor()
-        pass
+        bevtor()
+        
