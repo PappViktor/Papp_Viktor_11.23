@@ -5,10 +5,10 @@ Valasztas=""
 while Valasztas!="0":
     Valasztas=menu()    
     if Valasztas=='1':
-        kiir()
+        kiir()  
     elif Valasztas=='2':
-        #ujaru()
-       pass 
+        ujaru()
+       
     elif Valasztas=='3':
         
         #torles()

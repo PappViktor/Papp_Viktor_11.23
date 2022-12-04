@@ -31,3 +31,20 @@ def kiir():
     for i in range(0,len(aru)):
         print(f"\t {i+1} {(aru[i])}, {(ar[i])}, {(kaloria[i])} " )
     input()
+
+def ujaru():
+    system("cls")
+    print("új termék")
+    ujtermek=input("Termék neve: ")
+    ujar=int(input("Ára(Ft): "))
+    ujkal=float(input("A termék kalória tartalma: "))
+    aru.append(ujtermek)
+    ar.append(ujar)
+    kaloria.append(ujkal)
+    end(ujtermek,ujar,ujkal)
+    input("")    
+
+def end(aru,ar,kaloria):
+    file=open("aru.csv","a",encoding="utf-8")
+    file.write(f'\n{aru},{ar},{kaloria}')
+    file.close()
