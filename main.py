@@ -1,16 +1,25 @@
-from data import * 
-from os import system 
+from functions import *
+from os import system
 
-
-
-def menu():
-    system('cls')
-    print("Pékség neve")
-    print("0 - Kilépés")
-    print("1 - Termékek kiírása")
-    print("2 - Új termék hozzáadása")
-    print("3 - Termék törlése ")
-    print("4 - Bevásárlólista kiírása ")
-    print("5 - Bevásálólistaba termék hozzáadása")
-    print("6 - Bevásárlólista törlése ")
-    return input("Választás: ")
+Valasztas=""
+while Valasztas!="0":
+    Valasztas=menu()    
+    if Valasztas=='1':
+        #kiir()
+        pass
+    elif Valasztas=='2':
+        #ujaru()
+       pass 
+    elif Valasztas=='3':
+        
+        #torles()
+        pass
+    elif Valasztas=='4':
+        #bevkiir()
+        pass
+    elif Valasztas=="5":
+        #bevuj()
+        pass
+    elif Valasztas=='6':
+        #bevtor()
+        pass
