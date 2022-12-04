@@ -1,8 +1,8 @@
 from functions import *
 from os import system
 
-#Beolvas()
-
+Beolvas()
+BeolvasBev()
 
 Valasztas=""
 while Valasztas!="0":
@@ -17,8 +17,8 @@ while Valasztas!="0":
         torles()
         
     elif Valasztas=='4':
-        #bevkiir()
-        pass
+        bevkiir()
+        
     elif Valasztas=="5":
         #bevuj()
         pass
