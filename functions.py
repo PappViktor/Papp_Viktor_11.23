@@ -48,3 +48,28 @@ def end(aru,ar,kaloria):
     file=open("aru.csv","a",encoding="utf-8")
     file.write(f'\n{aru},{ar},{kaloria}')
     file.close()
+
+def kiir1():
+    system("cls")
+    print("asd")
+    for i in range(0,len(aru)):
+        print(f"\t {i+1} {(aru[i])}, {(ar[i])}, {(kaloria[i])} " )
+
+def torles():
+    system("cls")
+    print("asd")
+    kiir1()
+    tor=int(input("Melyik termeket töröljem ki?: "))
+    aru.pop(tor-1)
+    ar.pop(tor-1)
+    kaloria.pop(tor-1)
+    ment()
+    input()
+
+def ment():
+    file=open("aru.csv", "w", encoding="utf-8")
+    for i in range(len(aru)):
+        file.write(f"{aru[i]},{ar[i]},{kaloria[i]}")
+        if len(aru)-1>i:
+            file.write("\n")
+    file.close
