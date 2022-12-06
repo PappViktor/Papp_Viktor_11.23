@@ -37,7 +37,7 @@ def BeolvasBev():
 
 def kiir():
     system("cls")
-    print("asd")
+    print("Termékek:")
     for i in range(0,len(aru)):
         print(f"\t {i+1} {(aru[i])}, {(ar[i])}, {(kaloria[i])} " )
     input()
@@ -47,12 +47,12 @@ def ujaru():
     print("új termék")
     ujtermek=input("Termék neve: ")
     ujar=int(input("Ára(Ft): "))
-    ujkal=float(input("A termék kalória tartalma: "))
+    ujkal=int(input("A termék kalória tartalma: "))
     aru.append(ujtermek)
     ar.append(ujar)
     kaloria.append(ujkal)
     end(ujtermek,ujar,ujkal)
-    input("")    
+    input("Tovább..")    
 
 def end(aru,ar,kaloria):
     file=open("aru.csv","a",encoding="utf-8")
@@ -61,13 +61,13 @@ def end(aru,ar,kaloria):
 
 def kiir1():
     system("cls")
-    print("asd")
+    print("Termék törlése")
     for i in range(0,len(aru)):
-        print(f"\t {i+1} {(aru[i])}, {(ar[i])}, {(kaloria[i])} " )
+        print(f" {i+1} {(aru[i])}, {(ar[i])}, {(kaloria[i])} " )
 
 def torles():
     system("cls")
-    print("asd")
+    
     kiir1()
     tor=int(input("Melyik termeket töröljem ki?: "))
     aru.pop(tor-1)
@@ -86,19 +86,31 @@ def ment():
 
 def bevkiir():
     system("cls")
-    print("asd")
+    print("Termékek:")
     for i in range(0,len(Termek)):
-        print(f"\t {i+1}. {(Termek[i])}, {(db[i])}, ")
+        a = 0
+        for j in range(len(aru)):
+            if Termek[i] == ar[j]:
+                a = j
+        print(f"\t {i+1}. {Termek[i]}, db: {db[i]}, Ar: {ar[a] * db[i]}, Kal: {kaloria[a] * db[i]} ")
     input()
 
 def bevtor():
     system("cls")
     file=open("bevasarlolista.csv","w", encoding="utf-8")
-    file.pop("bevasarlolista.csv")
+    file.write("");
+    db.clear()
+    Termek.clear()
+    input("Sikeres törlés.")
 
 def bevuj():
     system("cls")
-    kiir1()
-    új=int(input(" "))
-    
-    
+    print("új termék")
+    termek=input("Termék neve: ")
+    db_=int(input("db: "))
+    Termek.append(termek)
+    db.append(db_)
+    file=open("./bevasarlolista.csv","a",encoding="utf-8")
+    file.write(f'\n{termek},{db_}')
+    file.close()
+    input("Sikeres felvétel")

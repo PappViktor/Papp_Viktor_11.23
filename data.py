@@ -4,4 +4,5 @@ ar=[]
 kaloria=[]
 #bevasarlo
 Termek=[]
+
 db=[]
