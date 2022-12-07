@@ -90,7 +90,7 @@ def bevkiir():
     for i in range(0,len(Termek)):
         a = 0
         for j in range(len(aru)):
-            if Termek[i] == ar[j]:
+            if Termek[i] == aru[j]:
                 a = j
         print(f"\t {i+1}. {Termek[i]}, db: {db[i]}, Ar: {ar[a] * db[i]}, Kal: {kaloria[a] * db[i]} ")
     input()
@@ -111,6 +111,6 @@ def bevuj():
     Termek.append(termek)
     db.append(db_)
     file=open("./bevasarlolista.csv","a",encoding="utf-8")
-    file.write(f'\n{termek},{db_}')
+    file.write(f'{termek},{db_}\n')
     file.close()
     input("Sikeres felvétel")
