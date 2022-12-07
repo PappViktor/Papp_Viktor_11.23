@@ -39,8 +39,8 @@ def kiir():
     system("cls")
     print("Termékek:")
     for i in range(0,len(aru)):
-        print(f"\t {i+1} {(aru[i])}, {(ar[i])}, {(kaloria[i])} " )
-    input()
+        print(f"\t {i+1}. Termék: {(aru[i])} ,Ár: {(ar[i])} , Kal: {(kaloria[i])} " )
+    input("Tovább..")
 
 def ujaru():
     system("cls")
@@ -61,20 +61,26 @@ def end(aru,ar,kaloria):
 
 def kiir1():
     system("cls")
-    print("Termék törlése")
+    print("Termékek")
     for i in range(0,len(aru)):
-        print(f" {i+1} {(aru[i])}, {(ar[i])}, {(kaloria[i])} " )
+        print(f" {i+1}. TerméK: {(aru[i])}, Ára: {(ar[i])}, Kal: {(kaloria[i])} " )
+
+def kiir2():
+    system("cls")
+    print("Termékek")
+    for i in range(0,len(aru)):
+        print(f" {i+1}. Termék: {(aru[i])} " )
 
 def torles():
     system("cls")
-    
-    kiir1()
+    print("Termék törlése")
+    kiir2()
     tor=int(input("Melyik termeket töröljem ki?: "))
     aru.pop(tor-1)
     ar.pop(tor-1)
     kaloria.pop(tor-1)
     ment()
-    input()
+    input("Tovább")
 
 def ment():
     file=open("aru.csv", "w", encoding="utf-8")
@@ -93,7 +99,7 @@ def bevkiir():
             if Termek[i] == aru[j]:
                 a = j
         print(f"\t {i+1}. {Termek[i]}, db: {db[i]}, Ar: {ar[a] * db[i]}, Kal: {kaloria[a] * db[i]} ")
-    input()
+    input("Tovább..")
 
 def bevtor():
     system("cls")
@@ -106,6 +112,7 @@ def bevtor():
 def bevuj():
     system("cls")
     print("új termék")
+    kiir1()
     termek=input("Termék neve: ")
     db_=int(input("db: "))
     Termek.append(termek)

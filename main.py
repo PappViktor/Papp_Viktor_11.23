@@ -13,7 +13,6 @@ while Valasztas!="0":
         ujaru()
        
     elif Valasztas=='3':
-        
         torles()
         
     elif Valasztas=='4':
